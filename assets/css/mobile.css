@@ -1,0 +1,24 @@
+html{
+    font-size: 80%;
+}
+
+section {
+    width: 100vw !important;
+    margin: 0 !important;
+}
+
+section h1 {
+    text-align: center;
+}
+.container {
+    border-radius: 0;
+    min-width: 100%;
+}
+
+.centralize {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
