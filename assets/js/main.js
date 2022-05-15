@@ -4,14 +4,6 @@ const form = document.querySelector("#form");
 let screenSize = window.screen.width;
 const input = document.querySelectorAll("[type=text");
 
-//Muda o  tipo input pra number se estiver no mobile
-document.DocumentElement.addEventListener("load", () =>{
-  
-  if(screenSize <= 720){
-    for(let i = 0; i < input.length; i++)
-      input[i].setAttribute("type", "number");
-  }
-})
 
 //Cria o paragrafo que guardará a mensagem
 const createResult = () => {
@@ -89,7 +81,16 @@ form.addEventListener("submit", (e) => {
 
 });
 
+//Muda o  tipo input pra number se estiver no mobile
+form.addEventListener("load", () =>{
+  
+  if(screenSize <= 720){
+    for(let i = 0; i < input.length; i++)
+      input[i].setAttribute("type", "number");
+  }
+})
 
+// ============== TRATAMENTO DE ERROS =============
 const isError = (peso, altura) => {
 
   //Caso o input NÃO tiver um valor do tipo NUMBER ou o valor FOR ZERO
