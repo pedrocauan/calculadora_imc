@@ -55,7 +55,7 @@ const imcLevel = (imc) => {
     return level[3];
   if (imc >= 25)
     return level[2];
-  if (imc >= 20)
+  if (imc >= 20 && imc <= 18.5)
     return level[1];
   if (imc < 18.5)
     return level[0];
