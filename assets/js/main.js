@@ -4,6 +4,15 @@ const form = document.querySelector("#form");
 let screenSize = window.screen.width;
 const input = document.querySelectorAll("[type=text");
 
+//Muda o  tipo input pra number se estiver no mobile
+document.DocumentElement.addEventListener("load", () =>{
+  
+  if(screenSize <= 720){
+    for(let i = 0; i < input.length; i++)
+      input[i].setAttribute("type", "number");
+  }
+})
+
 //Cria o paragrafo que guardará a mensagem
 const createResult = () => {
   const pResult = document.createElement("p");
@@ -57,10 +66,7 @@ const getImc = (weight, height) => (weight / Math.pow(height, 2)).toFixed(2);
 //========= COMEÇA AQUI ==========
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  if(screenSize <= 720){
-    for(let i = 0; i < input.length; i++)
-      input[i].setAttribute("type", "number");
-  }
+  
   //target é o evento disparado (qnd o evento disparar pegue o input com o id peso)
   const inputPeso = e.target.querySelector("#peso");
   const inputAltura = e.target.querySelector("#altura");
