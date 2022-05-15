@@ -13,12 +13,12 @@
 <body class="centralize">
   <section class="container">
     <h1>Calcule seu IMC</h1>
-    <form action="/" id="form" method="POST">
+    <form action="/" id="form" method="POST" novalidate>
       <label for="peso">Peso</label>
-      <input type="number" name="peso" id="peso" autocomplete="off" novalidate>
+      <input type="number" name="peso" id="peso" autocomplete="off">
 
       <label for="altura">Altura</label>
-      <input type="number" name="altura" id="altura" autocomplete="off" novalidate>
+      <input type="number" name="altura" id="altura" autocomplete="off">
       <button type="submit">Calcular IMC</button>
     </form>
     <div id="result"></div>
