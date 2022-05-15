@@ -60,8 +60,8 @@ form.addEventListener("submit", (e) => {
   const inputAltura = e.target.querySelector("#altura");
 
   //Pega o VALOR DOS INPUTS
-  const peso = Number((inputPeso.value.toString()).replace(",", "."));
-  const altura = Number((inputAltura.value.toString()).replace(",", "."));
+  const peso = Number((inputPeso.value).replace(",", "."));
+  const altura = Number((inputAltura.value).replace(",", "."));
 
   //Se tiver erro ele mostra o erro e para a função
   if(isError(peso,altura)){
