@@ -59,7 +59,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   if(screenSize <= 720){
     for(let i = 0; i < input.length; i++)
-      input[i].setAtribute("type", "number");
+      input[i].setAttribute("type", "number");
   }
   //target é o evento disparado (qnd o evento disparar pegue o input com o id peso)
   const inputPeso = e.target.querySelector("#peso");
