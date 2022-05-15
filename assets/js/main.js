@@ -1,7 +1,7 @@
 // =================> *O CÓDIGO COMEÇA LÁ EM BAIXO* <=================
 
 const form = document.querySelector("#form");
-let screenSize = window.screen.screen.width;
+let screenSize = window.screen.width;
 const input = document.querySelectorAll("[type=text");
 
 //Cria o paragrafo que guardará a mensagem
