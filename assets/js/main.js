@@ -97,20 +97,13 @@ form.addEventListener("submit", (e) => {
 // ============== TRATAMENTO DE ERROS =============
 const isError = (peso, altura) => {
 
-  //Caso o input NÃO tiver um valor do tipo NUMBER ou o valor FOR ZERO
+  //Caso o input NÃO tiver um valor do tipo NUMBER no peso ou o valor do peso FOR ZERO
   if (!peso) {
     setResult("Peso inválido !!", false);
     document.querySelector('#peso').classList.add("fieldError");
     return true; //A partir do momento q ele encontra return a função nao é mais executada
   }
-  document.querySelector('#peso').classList.remove("fieldError");
-
-  if (!altura) {
-    setResult("Altura inválida !!", false);
-    document.querySelector('#altura').classList.add("fieldError");
-    return true;
-  }
-  document.querySelector('#altura').classList.remove("fieldError");
+  
   //caso o peso seja negativo 
   if(peso < 0){
     setResult("Não é possível calcular um IMC com o peso negativo", false);
@@ -118,7 +111,9 @@ const isError = (peso, altura) => {
     return true;
   }
   document.querySelector('#peso').classList.remove("fieldError");
+  document.querySelector('#peso').classList.remove("fieldError");
 
+ 
   //caso o peso seja maior que 700
   if(peso > 630){
     setResult("Peso inválido !! Não existe pessoa com mais de 630kg", false);
@@ -126,6 +121,14 @@ const isError = (peso, altura) => {
     return true;
   }
   document.querySelector('#peso').classList.remove("fieldError");
+  
+  //Caso o input NÃO tiver um valor do tipo NUMBER na ou o valor da altura FOR ZERO
+  if (!altura) {
+    setResult("Altura inválida !!", false);
+    document.querySelector('#altura').classList.add("fieldError");
+    return true;
+  }
+  document.querySelector('#altura').classList.remove("fieldError");
 
   //caso a altura seja maior do que a da maior pessoa do mundo
   if (altura > 2.51) {
